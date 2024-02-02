@@ -98,7 +98,29 @@ img {
     font-weight: 900;
     letter-spacing: 0.5rem;
     margin-bottom: 6rem;
+    /* animation: moveup 0.5s linear 0.5s forwards; */
 }
+
+.header__img{
+    /* animation: moveup 0.5s linear 1s forwards; */
+    transition-delay: 0.5s
+}
+
+.reveal{
+    opacity: 0; 
+    transform: translateY(30px);
+    transition: all 0.5s;
+}
+
+.un-reveal{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* @keyframes moveup{
+    from{opacity: 0; transform: translateY(30px);}
+    to{opacity: 1; transform: translateY(0px);}
+} */
 
 .header__hamburger {
     display: none;
@@ -146,7 +168,16 @@ img {
     width: 100%;
 }
 
+.right{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s;
+}
 
+.not-right{
+    opacity: 1;
+    transform: translateX(0%);
+}
 
 /* Section 3 */
 
@@ -213,34 +244,70 @@ img {
     gap: 2rem;
 }
 
-.card h2 {
-    color: #000000;
-    font-size: var(--fs-2xl);
+.card__img {
+    width: 60px;
+    border-radius: 50%;
+    transition-delay: 0s;
 }
 
-.card p {
+.car__h2 {
+    color: #000000;
+    font-size: var(--fs-2xl);
+    transition-delay: 0.2s;
+}
+
+.card__p {
     color: rgba(61, 61, 61, .9);
     line-height: 2rem;
     text-align: center;
     font-size: var(--fs-base);
     font-weight: 700;
+    transition-delay: 0.3s;
 }
 
-.card a {
+.card__a {
     color: rgba(61, 61, 61, .6);
     font-size: var(--fs-sm);
+    transition-delay: 0.4s;
 }
 
-.card img {
-    width: 60px;
-    border-radius: 50%;
-}
 
 /* Section 5 */
 
 .four-image {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.show{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.image-1{
+    transition-delay: 0.4s;
+}
+
+.image-2{
+    transition-delay: 0.3s;
+}
+
+.image-3{
+    transition-delay: 0.2s;
+}
+
+.image-4{
+    transition-delay: 0s;
+}
+
+@keyframes slide{
+    100%{transform: translateX(0%); opacity: 1;}
 }
 
 /* Footer */
